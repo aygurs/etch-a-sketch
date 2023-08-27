@@ -5,21 +5,39 @@ gridSizeInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         const gridSizeValue = parseInt(gridSizeInput.value);
         gridContainer.textContent = '';
-        console.log(gridSizeValue);
+
+        function gridCreation(gridSizeValue) {
+
+            function gridSizeCheck() {
+                if (gridSizeValue <= 0) {
+                    alert('Please enter a number larger than 0!')
+                    throw 'Please enter a number larger than 0!'
+                }
+    
+                else if (gridSizeValue >= 101) {
+                    alert('Please enter a number equal to or smaller than 100!')
+                    throw 'Please enter a number equal to or smaller than 100!'
+                }
+            }
+            
+            gridSizeCheck()
+
+            for (let i = 0; i < (gridSizeValue * gridSizeValue); i++) {
+        
+                const squareSize = 700 / gridSizeValue;
+        
+                const gridSquare = document.createElement('div');
+                gridSquare.classList.add('gridSquare');
+                gridSquare.style.width = `${squareSize}px`;
+                gridSquare.style.height = `${squareSize}px`;
+                gridSquare.addEventListener('mouseenter', function() {
+                    gridSquare.classList.add('hovered');
+                })
+                gridContainer.appendChild(gridSquare);
+            }
+        }
+
         gridCreation(gridSizeValue);
+        
     }
 })
-
-function gridCreation(gridSizeValue) {
-    for (let i = 0; i < gridSizeValue; i++) {
-
-        const squareSize = 500 / gridSizeValue;
-        console.log(squareSize);
-
-        const gridSquare = document.createElement('div');
-        gridSquare.classList.add('gridSquare');
-        gridSquare.style.width = `${squareSize}px`;
-        gridSquare.style.height = `${squareSize}px`;
-        gridContainer.appendChild(gridSquare);
-    }
-}
