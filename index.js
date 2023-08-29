@@ -5,7 +5,16 @@ const button32 = document.querySelector('.button32');
 const button64 = document.querySelector('.button64');
 const buttonBlack = document.querySelector('.buttonBlack');
 const buttonWhite = document.querySelector('.buttonWhite');
-const gridSquare = document.querySelector('.gridSquare');
+
+let selectedColour = 'black'
+
+buttonBlack.addEventListener('click', function() {
+    selectedColour = 'black'
+})
+
+buttonWhite.addEventListener('click', function() {
+    selectedColour = 'white'
+})
 
 // To make the base grid when loading the page start with 16x16
 for (let i = 0; i < (16 * 16); i++) {
@@ -17,7 +26,7 @@ for (let i = 0; i < (16 * 16); i++) {
     gridSquare.style.width = `${squareSize}px`;
     gridSquare.style.height = `${squareSize}px`;
     gridSquare.addEventListener('mouseenter', function() {
-        gridSquare.classList.add('hovered');
+        gridSquare.style.backgroundColor = selectedColour
     })
     gridContainer.appendChild(gridSquare);
 }
@@ -38,7 +47,7 @@ button16.addEventListener('click', function() {
             gridSquare.style.width = `${squareSize}px`;
             gridSquare.style.height = `${squareSize}px`;
             gridSquare.addEventListener('mouseenter', function() {
-                gridSquare.classList.add('hovered');
+                gridSquare.style.backgroundColor = selectedColour
             })
             gridContainer.appendChild(gridSquare);
             }
@@ -63,7 +72,7 @@ button32.addEventListener('click', function() {
             gridSquare.style.width = `${squareSize}px`;
             gridSquare.style.height = `${squareSize}px`;
             gridSquare.addEventListener('mouseenter', function() {
-                gridSquare.classList.add('hovered');
+                gridSquare.style.backgroundColor = selectedColour
             })
             gridContainer.appendChild(gridSquare);
             }
@@ -88,7 +97,7 @@ button64.addEventListener('click', function() {
             gridSquare.style.width = `${squareSize}px`;
             gridSquare.style.height = `${squareSize}px`;
             gridSquare.addEventListener('mouseenter', function() {
-                gridSquare.classList.add('hovered');
+                gridSquare.style.backgroundColor = selectedColour
             })
             gridContainer.appendChild(gridSquare);
             }
@@ -128,7 +137,7 @@ gridSizeInput.addEventListener('keyup', function(event) {
                 gridSquare.style.width = `${squareSize}px`;
                 gridSquare.style.height = `${squareSize}px`;
                 gridSquare.addEventListener('mouseenter', function() {
-                    gridSquare.classList.add('hovered');
+                    gridSquare.style.backgroundColor = selectedColour
                 })
                 gridContainer.appendChild(gridSquare);
             }
