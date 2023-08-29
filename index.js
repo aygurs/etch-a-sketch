@@ -3,6 +3,9 @@ const gridContainer = document.querySelector('.gridContainer');
 const button16 = document.querySelector('.button16');
 const button32 = document.querySelector('.button32');
 const button64 = document.querySelector('.button64');
+const buttonBlack = document.querySelector('.buttonBlack');
+const buttonWhite = document.querySelector('.buttonWhite');
+const gridSquare = document.querySelector('.gridSquare');
 
 // To make the base grid when loading the page start with 16x16
 for (let i = 0; i < (16 * 16); i++) {
