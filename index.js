@@ -5,9 +5,12 @@ const button32 = document.querySelector('.button32');
 const button64 = document.querySelector('.button64');
 const buttonBlack = document.querySelector('.buttonBlack');
 const buttonWhite = document.querySelector('.buttonWhite');
+const buttonRainbow = document.querySelector('.buttonRainbow')
 
 let selectedColour = 'black'
+let hovered = false;
 
+// Pen colour buttons
 buttonBlack.addEventListener('click', function() {
     selectedColour = 'black'
 })
@@ -16,7 +19,20 @@ buttonWhite.addEventListener('click', function() {
     selectedColour = 'white'
 })
 
-// To make the base grid when loading the page start with 16x16
+buttonRainbow.addEventListener('click', function() {
+    selectedColour = getRandomRainbowColour();
+})
+
+function getRandomRainbowColour() {
+    const rainbowColours = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    if (hovered = true) {
+        const randomNumber = Math.floor(Math.random() * 7);
+        const randomColour = rainbowColours[randomNumber];
+        return randomColour;
+    }
+}
+
+// To make the base grid when first loading the page start with 16x16
 for (let i = 0; i < (16 * 16); i++) {
         
     const squareSize = 700 / 16;
@@ -26,6 +42,7 @@ for (let i = 0; i < (16 * 16); i++) {
     gridSquare.style.width = `${squareSize}px`;
     gridSquare.style.height = `${squareSize}px`;
     gridSquare.addEventListener('mouseenter', function() {
+        hovered = true;
         gridSquare.style.backgroundColor = selectedColour
     })
     gridContainer.appendChild(gridSquare);
@@ -47,6 +64,7 @@ button16.addEventListener('click', function() {
             gridSquare.style.width = `${squareSize}px`;
             gridSquare.style.height = `${squareSize}px`;
             gridSquare.addEventListener('mouseenter', function() {
+                hovered = true;
                 gridSquare.style.backgroundColor = selectedColour
             })
             gridContainer.appendChild(gridSquare);
@@ -72,6 +90,7 @@ button32.addEventListener('click', function() {
             gridSquare.style.width = `${squareSize}px`;
             gridSquare.style.height = `${squareSize}px`;
             gridSquare.addEventListener('mouseenter', function() {
+                hovered = true;
                 gridSquare.style.backgroundColor = selectedColour
             })
             gridContainer.appendChild(gridSquare);
@@ -97,6 +116,7 @@ button64.addEventListener('click', function() {
             gridSquare.style.width = `${squareSize}px`;
             gridSquare.style.height = `${squareSize}px`;
             gridSquare.addEventListener('mouseenter', function() {
+                hovered = true;
                 gridSquare.style.backgroundColor = selectedColour
             })
             gridContainer.appendChild(gridSquare);
@@ -106,7 +126,7 @@ button64.addEventListener('click', function() {
         gridCreation(gridSizeValue);
 })
 
-// When enter is pressed a grid with the number entered will be created
+// When enter is pressed, a grid with the number entered will be created
 gridSizeInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         const gridSizeValue = parseInt(gridSizeInput.value);
@@ -137,6 +157,7 @@ gridSizeInput.addEventListener('keyup', function(event) {
                 gridSquare.style.width = `${squareSize}px`;
                 gridSquare.style.height = `${squareSize}px`;
                 gridSquare.addEventListener('mouseenter', function() {
+                    hovered = true;
                     gridSquare.style.backgroundColor = selectedColour
                 })
                 gridContainer.appendChild(gridSquare);
