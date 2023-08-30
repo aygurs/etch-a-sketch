@@ -33,7 +33,7 @@ function getRandomRandomColour() {
 // To make the base grid when first loading the page start with 16x16
 for (let i = 0; i < (16 * 16); i++) {
         
-    const squareSize = 700 / 16;
+    const squareSize = 500 / 16;
 
     const gridSquare = document.createElement('div');
     gridSquare.classList.add('gridSquare');
@@ -54,7 +54,7 @@ button16.addEventListener('click', function() {
 
         for (let i = 0; i < (gridSizeValue * gridSizeValue); i++) {
         
-            const squareSize = 700 / gridSizeValue;
+            const squareSize = 500 / gridSizeValue;
         
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('gridSquare');
@@ -79,7 +79,7 @@ button32.addEventListener('click', function() {
 
         for (let i = 0; i < (gridSizeValue * gridSizeValue); i++) {
         
-            const squareSize = 700 / gridSizeValue;
+            const squareSize = 500 / gridSizeValue;
         
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('gridSquare');
@@ -104,7 +104,7 @@ button64.addEventListener('click', function() {
 
         for (let i = 0; i < (gridSizeValue * gridSizeValue); i++) {
         
-            const squareSize = 700 / gridSizeValue;
+            const squareSize = 500 / gridSizeValue;
         
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('gridSquare');
