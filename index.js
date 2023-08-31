@@ -151,7 +151,7 @@ gridSizeInput.addEventListener('keyup', function(event) {
 
             for (let i = 0; i < (gridSizeValue * gridSizeValue); i++) {
         
-                const squareSize = 700 / gridSizeValue;
+                const squareSize = 500 / gridSizeValue;
         
                 const gridSquare = document.createElement('div');
                 gridSquare.classList.add('gridSquare');

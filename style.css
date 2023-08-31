@@ -1,7 +1,12 @@
+body {
+    background-color: rgb(237, 237, 237);
+}
+
 .gridContainer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    background-color: white;
     width: 500px;
     height: 500px;
     margin: 0;
@@ -13,4 +18,5 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border: 1px solid black;
 }
