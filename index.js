@@ -6,20 +6,26 @@ const button64 = document.querySelector('.button64');
 const buttonBlack = document.querySelector('.buttonBlack');
 const buttonWhite = document.querySelector('.buttonWhite');
 const buttonRandom = document.querySelector('.buttonRandom')
+const colourPicker = document.querySelector('#colourPicker')
 
 let selectedColour = 'black'
 
 // Pen colour buttons
 buttonBlack.addEventListener('click', function() {
     selectedColour = 'black'
-})
+});
 
 buttonWhite.addEventListener('click', function() {
     selectedColour = 'white'
-})
+});
 
 buttonRandom.addEventListener('click', function() {
     selectedColour = getRandomRandomColour();
+});
+
+colourPicker.addEventListener('input', function() {
+    const chosenColour = colourPicker.value;
+    selectedColour = chosenColour;
 })
 
 function getRandomRandomColour() {
@@ -28,7 +34,8 @@ function getRandomRandomColour() {
     const randomB = Math.floor(Math.random() * 265);
     let randomColour = `rgb(${randomR}, ${randomG}, ${randomB})`;
     return randomColour;
-}
+};
+
 
 // To make the base grid when first loading the page start with 16x16
 for (let i = 0; i < (16 * 16); i++) {
