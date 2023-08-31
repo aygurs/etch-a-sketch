@@ -1,5 +1,46 @@
 body {
     background-color: rgb(237, 237, 237);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.sizeButtonContainer button {
+    margin: 5px;
+}
+.sizeInputContainer label {
+    margin-right: 5px;
+}
+.colourContainer button {
+    margin: 10px;
+    width: 110px;
+}
+
+.sizeTitle,
+.sizeInputContainer,
+.sizeButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.sizeInputContainer {
+    padding-bottom: 10px;
+}
+
+.gridColourContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 129px;
+}
+
+.colourContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    padding-right: 10px;
 }
 
 .gridContainer {
@@ -18,5 +59,4 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: 1px solid black;
 }
