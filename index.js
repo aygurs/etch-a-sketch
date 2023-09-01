@@ -137,13 +137,13 @@ gridSizeInput.addEventListener('keyup', function(event) {
 
             function gridSizeCheck() {
                 if (gridSizeValue <= 0) {
-                    alert('Please enter a number larger than 0!')
-                    throw 'Please enter a number larger than 0!'
+                    alert('Please enter a number larger than 0! \nChoose an option or type a new number to continue.')
+                    throw 'Please enter a number larger than 0! Choose an option or type a new number.'
                 }
     
                 else if (gridSizeValue >= 101) {
-                    alert('Please enter a number equal to or smaller than 100!')
-                    throw 'Please enter a number equal to or smaller than 100!'
+                    alert('Please enter a number equal to or smaller than 100! \nChoose an option or type a new number to continue.')
+                    throw 'Please enter a number equal to or smaller than 100! Choose an option or type a new number.'
                 }
             }
             

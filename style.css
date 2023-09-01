@@ -23,6 +23,13 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    padding-bottom: 10px;
+}
 .sizeInputContainer {
     padding-bottom: 10px;
 }
@@ -53,10 +60,23 @@ body {
     margin: 0;
     padding: 0;
     border: 2px solid black;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
 .gridSquare {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+button {
+    border: 1px solid black;
+    background-color: white;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+button:active {
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
 }
